@@ -5,70 +5,92 @@ body, h1, h2, h3, p, button {
   font-family: "Poppins", sans-serif;
 }
 
-/* ===== Fondo ===== */
+/* ===== Fondo ===== *//* ===== Fondo y estructura general ===== */
 body {
-  background: radial-gradient(circle at top, #0b032d, #000000);
+  background: #000;
   color: #fff;
+  font-family: "Poppins", sans-serif;
   text-align: center;
+  margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
+  overflow: hidden;
+}
+/* ===== Fondo y estructura general ===== */
+body {
+  background: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
 }
 
-/* ===== Fondo espacial Morph Global ===== */
-.stars {
+/* ===== Fondo espacial base (tu imagen fija) ===== */
+body::before {
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: 
-    linear-gradient(rgba(10, 0, 25, 0.8), rgba(0, 0, 0, 0.9)),
+    linear-gradient(rgba(10, 0, 25, 0.7), rgba(0, 0, 0, 0.85)),
     url("https://cdn.textures4photoshop.com/tex/thumbs/space-background-with-starfield-free-download-thumb45.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   z-index: 0;
-  animation: fadeInBg 1.5s ease-in-out;
 }
 
-@keyframes fadeInBg {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-
-/* ===== Header ===== */
-header {
-  margin-top: 40px;
+/* ===== Capa de estrellas animadas ===== */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  opacity: 0.35;
+  animation: moveStars 90s linear infinite;
   z-index: 1;
 }
 
-.logo {
-  width: 160px;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -3000px 1500px; }
 }
 
-.logo:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 15px #b38bff);
+/* ===== Contenido principal ===== */
+header, main, footer {
+  position: relative;
+  z-index: 2;
+}
+
+header {
+  margin-top: 40px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: 2.5em;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 1px;
+  font-size: 2.4em;
+  margin: 10px 0 5px;
 }
 
 h2 {
-  font-size: 1.2em;
   color: #b38bff;
-  margin-bottom: 30px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 
 /* ===== Botones ===== */
@@ -79,7 +101,6 @@ h2 {
   width: 80%;
   max-width: 900px;
   margin: 0 auto 40px;
-  z-index: 1;
 }
 
 button {
@@ -100,17 +121,6 @@ button:hover {
   background: linear-gradient(135deg, #b38bff, #8a63ff);
 }
 
-/* ===== Animación fade-in ===== */
-.fade-in {
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== Footer ===== */
 /* ===== Footer ===== */
 footer {
   position: fixed;
@@ -125,4 +135,14 @@ footer {
   color: #cccccc;
   z-index: 10;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Animación fade-in general ===== */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
