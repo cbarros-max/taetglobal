@@ -19,20 +19,23 @@ body {
 }
 
 /* ===== Efecto estrellado ===== */
+/* ===== Fondo estrellado (nuevo, seguro y elegante) ===== */
 .stars {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
-  background: url("https://i.imgur.com/FY7vQWQ.png") repeat;
-  animation: moveStars 80s linear infinite;
+  background: url("https://cdn.textures4photoshop.com/tex/thumbs/space-background-with-starfield-free-download-thumb45.jpg") repeat;
+  background-size: cover;
+  animation: moveStars 120s linear infinite;
   z-index: 0;
+  opacity: 0.7;
 }
 
 @keyframes moveStars {
   from { background-position: 0 0; }
-  to { background-position: -10000px 5000px; }
+  to { background-position: -2000px 1000px; }
 }
 
 /* ===== Header ===== */
