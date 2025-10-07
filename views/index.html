@@ -6,7 +6,7 @@
   <title>Morph Global | Directorio de Sites</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
-<body>
+<body class="fade-in">
   <div class="stars"></div>
 
   <header>
@@ -18,30 +18,36 @@
   <main>
     <h3>Directorio de Sites</h3>
     <div class="button-container">
-      <button onclick="location.href='https://taetglobal.com/actitudpersonal'">Actitud Personal</button>
-      <button onclick="location.href='https://taetglobal.com/actitudpersonalv2'">Actitud Personal V2</button>
-      <button onclick="location.href='https://taetglobal.com/bancoformosaaniversario'">Banco Formosa Aniversario</button>
-      <button onclick="location.href='https://taetglobal.com/bcofsa'">BCOFSA</button>
-      <button onclick="location.href='https://taetglobal.com/clientesinternos'">Clientes Internos</button>
-      <button onclick="location.href='https://taetglobal.com/clientesinternos2'">Clientes Internos 2</button>
-      <button onclick="location.href='https://taetglobal.com/colaboradores'">Colaboradores</button>
-      <button onclick="location.href='https://taetglobal.com/disa'">DISA</button>
-      <button onclick="location.href='https://taetglobal.com/ecampus'">Ecampus</button>
-      <button onclick="location.href='https://taetglobal.com/ejemplo'">Ejemplo</button>
-      <button onclick="location.href='https://taetglobal.com/fapasa'">Fapasa</button>
-      <button onclick="location.href='https://taetglobal.com/games'">Games</button>
-      <button onclick="location.href='https://taetglobal.com/m2ods'">M2ODS</button>
-      <button onclick="location.href='https://taetglobal.com/m2simulacion'">M2 Simulación</button>
-      <button onclick="location.href='https://taetglobal.com/modulo'">Módulo</button>
-      <button onclick="location.href='https://taetglobal.com/moduloii'">Módulo II</button>
-      <button onclick="location.href='https://taetglobal.com/pildora'">Píldora</button>
-      <button onclick="location.href='https://taetglobal.com/prueba'">Prueba</button>
-      <button onclick="location.href='https://taetglobal.com/supervielle'">Supervielle</button>
+      <button onclick="openLink('https://taetglobal.com/actitudpersonal')">Actitud Personal</button>
+      <button onclick="openLink('https://taetglobal.com/actitudpersonalv2')">Actitud Personal V2</button>
+      <button onclick="openLink('https://taetglobal.com/bancoformosaaniversario')">Banco Formosa Aniversario</button>
+      <button onclick="openLink('https://taetglobal.com/bcofsa')">BCOFSA</button>
+      <button onclick="openLink('https://taetglobal.com/clientesinternos')">Clientes Internos</button>
+      <button onclick="openLink('https://taetglobal.com/clientesinternos2')">Clientes Internos 2</button>
+      <button onclick="openLink('https://taetglobal.com/colaboradores')">Colaboradores</button>
+      <button onclick="openLink('https://taetglobal.com/disa')">DISA</button>
+      <button onclick="openLink('https://taetglobal.com/ecampus')">Ecampus</button>
+      <button onclick="openLink('https://taetglobal.com/ejemplo')">Ejemplo</button>
+      <button onclick="openLink('https://taetglobal.com/fapasa')">Fapasa</button>
+      <button onclick="openLink('https://taetglobal.com/games')">Games</button>
+      <button onclick="openLink('https://taetglobal.com/m2ods')">M2ODS</button>
+      <button onclick="openLink('https://taetglobal.com/m2simulacion')">M2 Simulación</button>
+      <button onclick="openLink('https://taetglobal.com/modulo')">Módulo</button>
+      <button onclick="openLink('https://taetglobal.com/moduloii')">Módulo II</button>
+      <button onclick="openLink('https://taetglobal.com/pildora')">Píldora</button>
+      <button onclick="openLink('https://taetglobal.com/prueba')">Prueba</button>
+      <button onclick="openLink('https://taetglobal.com/supervielle')">Supervielle</button>
     </div>
   </main>
 
   <footer>
     <p>© 2025 Morph Global | Born to Transform</p>
   </footer>
+
+  <script>
+    function openLink(url) {
+      window.open(url, "_blank");
+    }
+  </script>
 </body>
 </html>
