@@ -133,3 +133,31 @@ footer {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* ===== FIX PARA QUE EL CONTENIDO QUEDE ARRIBA ===== */
+#app-content {
+  position: relative;
+  z-index: 9999; /* 👈 asegura que esté siempre arriba */
+}
+
+/* Esto mantiene los fondos detrás */
+#background-layer,
+#stars-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* 👈 se quedan atrás */
+}
+
+#stars-layer {
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  opacity: 0.35;
+  animation: moveStars 90s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -3000px 1500px; }
+}
